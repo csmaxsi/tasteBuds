@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Navbar from "./components/NavBar";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
+
+import FoodOutlet from "./Pages/FoodOutlet";
+import Addoutlet from "./Pages/Addoutlet";
+import Addfood from "./Pages/Addfood";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Foods from "./Pages/Foods";
+
 
 
 class App extends Component {
@@ -15,10 +18,13 @@ class App extends Component {
                     <Navbar />
                     <div className="content" style={{ "marginTop": 70 }}>
                         <Routes>
-                            <Route exact path="/" element={<Home />} />
-                            <Route exact path="/about" element={<About />} />
-                            <Route exact path="/contact" element={<Contact />} />
-                            <Route exact path="/home" element={<Home />} />
+                            <Route exact path="/" element={<Foods />} />
+                            <Route exact path="/FoodOutlet" element={<FoodOutlet />} />
+                            <Route exact path="/Addoutlet" element={<Addoutlet />} />
+                            <Route exact path="/Addfood" element={<Addfood />} />
+                            <Route exact path="/Updatefood" element={<Addfood />} />
+                            <Route exact path="/foods" element={<Foods />} />
+
                         </Routes>
 
                     </div>
